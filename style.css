@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  --font:'Poppins', sans-serif;
+  background-color: #ccc;
+}
+
+.navbar-brand {
+    font-family: var(--font);
+}
+
+.card-img-top,
+.card-img {
+    aspect-ratio: 1/1.5;
+    object-fit: cover;
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+}
+
+.col-sm {
+    margin-bottom: 15px;
+    perspective: 800px;
+}
+
+.col-sm img {
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    transform: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.text-muted {
+    color: black !important;
+}
+
+.guess,
+.probability {
+    background: coral;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.front, .back {
+    position: absolute;
+    cursor: pointer;
+}
+
+.back {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.rotate{
+    transform: rotateY(180deg);
+}
+
+.lose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    padding: 30px;
+    background: black;
+    color: white;
+}
+
+.btn-primary {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.visible {
+    visibility: hidden !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .card {
+      margin: 0 auto;
+      float: none;
+    }
+  }
